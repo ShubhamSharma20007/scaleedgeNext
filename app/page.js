@@ -1,95 +1,126 @@
+"use client"
 import Image from 'next/image'
-import styles from './page.module.css'
-
+// import AOS from "aos";
+// import "aos/dist/aos.css";
+import "@/app/style/HomeCSS/mainpage.css";
+import Companyserver from "./components/MainpageComponent/companyserver";
+import dotline from "../public/images/dottedline.webp";
+import ladybulb from "../public/images/home.webp";
+import rightyellow from "../public/images/rightyellowwing.webp?v=1.1";
+import pinktringle from "../public/images/pinktriangle.webp";
+import Categories from "../app/components/MainpageComponent/categories";
+import Ourabout from "./components/MainpageComponent/ourabout";
+import Ourservices from "./components/MainpageComponent/ourservices";
+import Ourproject from "../app/components/MainpageComponent/ourproject";
+import Socialmedia from "../app/components/MainpageComponent/socialmedia";
+import Oursolution from "./components/MainpageComponent/oursolution";
+import Progress from "../app/components/MainpageComponent/progess";
+import Navbar from './components/Navbar/navbar';
+import Footer from './components/Footer/footer';
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+   <>
+     <Navbar />
+      {/* <div id="loader" ref={item}  >
+          <p ref={itemvalue1}>Simple</p>
+          <p ref={itemvalue2} >Smarter</p>
+          <p ref={itemvalue3}>Faster</p>
+      </div> */}
+      <div className="col-md-12 main-page-container" >
+        <div className="row col-md-10">
+          <div className="col-md-5 mainpage-left-container m-auto " data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="300"
+              data-aos-once="false">
+            <p className="section-subtitle">
+          
+            Welcome to ScaleEdge Solutions
+            </p>
+            <div
+              className="mainpage-headline-container"
+              
+            > 
+              <h1 className="main-page-container-header">
+              Simpler.Smarter.Faster
+              </h1>
+              
+             
+            </div>
+            <div className="section-about col-md-11">
+           <ul className='p-0'>
+           <li className="text-start"><strong>Simplified Technology :</strong> We simplify complex technology.</li>
+           <li className="text-start"><strong>Smarter Solutions:</strong> Delivering solutions that work seamlessly for your business.</li>
+           <li className="text-start"><strong>Commitment to Speed:</strong> Staying ahead in the fast-paced digital landscape.</li>
+           <li className="text-start"><strong>Efficiency:</strong> Achieving your goals efficiently..</li>
+           <li className="text-start"><strong>Streamlined Approach:</strong>Partner with us for a streamlined, intelligent approach.</li>
+           <li className="text-start"><strong>Accelerated Success:</strong>Your journey in the digital world made smoother and faster.</li>
+           </ul>
+
+            </div>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+                src={dotline}
+                title="dotline"
+                width={'100%'}
+                height={'100%'}
+                alt="dotline"
+                className="img-fluid dotted"
+                
+              />
+            {/* <div className="slider-btn">
+              <Link className="text-dark fw-bold"  >
+                <span className="main-btn magnetic startedbtn"> get started </span>
+              </Link>
+            </div> */}
+            <Image
+            width={'100%'}
+            height={'100%'}
+              src={pinktringle}
+              alt="pinktringle"
+              className="img-fluid pinktringle"
+              title="pinktringle"
+              
+              
             />
-          </a>
+          </div>
+          <div className="col-md-6 mainpage-right-container d-flex start-content-center">
+          <div className="m-auto">
+          <Image
+              src={ladybulb}
+              height={'100%'}
+              width={'100%'}
+              className="ladybulb img-fluid  m-auto  "
+              title="software service"
+              alt="software service"
+              data-aos="fade-left"
+              data-aos-offset="0"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="300"
+              
+            />
+          </div>
+            
+            <Image
+            height={'100%'}
+            width={'100%'}
+              src={rightyellow}
+              alt="curve-img"
+              className="img-fluid curve-img"
+              title="curve-img"
+              
+            />
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <Ourservices />
+        <Ourabout />
+        <Companyserver />
+        <Categories/>
+        <Ourproject />
+        <Progress/>
+        <Socialmedia />
+        <Oursolution />
+        <Footer />
+   </>
   )
 }

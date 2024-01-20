@@ -9,8 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^4.41.3",
+    "aos": "^2.3.4",
+    "boostrap": "^2.0.0",
+    "bootstrap": "^5.3.2",
+    "gsap": "^3.12.4",
+    "next": "14.0.4",
     "react": "^18",
+    "react-bootstrap": "^2.9.2",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "react-toastify": "^10.0.1",
+    "sharp": "^0.33.2",
+    "sweetalert2": "^11.10.3",
+    "toastify": "^2.0.1"
   }
 }
