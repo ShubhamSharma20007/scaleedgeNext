@@ -463,6 +463,7 @@
 .updown {
     position: fixed;
     display: none;
+    z-index: 9999;
     right: 5%;
     bottom: 6%;
 }

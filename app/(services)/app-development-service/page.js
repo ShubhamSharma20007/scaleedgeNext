@@ -222,7 +222,7 @@ const page = () => {
           <p className='col-md-12 p-0  text-center'>At ScaleEdge Solution, we offer a wide range of mobile app development services to cater to the diverse mobile app development requirements of businesses across the world. Our expert team of developers excels in creating bespoke mobile applications for iOS, Android, and cross-platform environments. Select your best suit as per your business needs, goals, and objectives.</p>
           </div>
       
-        <div className="row col-md-12 sectwo-subcontainer p-0">
+        <div className="row col-md-12 sectwo-subcontainer ">
           {content.map((item, index) => {
             return (
               <div

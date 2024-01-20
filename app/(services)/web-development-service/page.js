@@ -229,7 +229,7 @@ const page = () => {
         para="ScaleEdge Solutions is a trusted web development company in India. We are providing world-class Custom web design and web development services in India. We blend creativity and functionality to create custom websites tailored to your unique vision. Our team of experienced and professional web developers for user-friendly, highly responsive, and performance-oriented websites and web applications at affordable prices."
         app_main_img = {webimg}
       />
-       <div className="mt-0 sectwo-main-container col-md-12 p-0">
+       <div className="mt-0 sectwo-main-container col-md-12 ">
       
       <div className="row  col-md-12 sectwo-subcontainer sectwo-subcontainer2 m-auto">
       <div className="ser2-first-container col-md-12 ">

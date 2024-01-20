@@ -1,7 +1,10 @@
-
+import { Rubik } from "next/font/google"
 import './globals.css'
 
-
+export const font = Rubik({
+  subsets:['latin'],
+  weight:['300','400'],
+})
 
 export const metadata = {
   title:{
@@ -61,16 +64,11 @@ export default function RootLayout({ children }) {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossOrigin="anonymous"></script>
 {/* metatag */}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RV4GV9YXVB"></script>
-    {/* <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments)}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-RV4GV9YXVB');
-    </script> */}
+
+
       </head>
 
-      <body  suppressHydrationWarning style={{ overflowX: 'hidden' }}>
+      <body  suppressHydrationWarning className={font.className} style={{ overflowX: 'hidden' }}>
         {children}
       </body>
     </html>

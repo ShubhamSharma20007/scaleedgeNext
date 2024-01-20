@@ -66,27 +66,7 @@ const socialmedia = () => {
                 </div>
 
             </div>
-            {/* <div className="col-md-3 col-12 p-0">
-                <div className='social-media-card'>
-                    <div className="social-content-box col-md-8">
-                        <div className="social-i ">
-                        <Image   src={oneklick} title='oneklick logo'  width={'90px'} height={90}     alt="oneklick logo" />
-                        </div>
-                       
-                    </div>
-                    <div className="social-content-link">
-                    <span>
-                    <button className='swipe-btn'  role="button">
-                <i class="fa-solid fa-arrow-right"></i>
-                </button>
-                </span>
-                        </div>
-
-                </div>
-
-            </div> */}
-         
-           
+          
             </div>
         </div>
         </div>

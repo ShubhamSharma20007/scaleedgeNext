@@ -118,7 +118,7 @@ export default function Home() {
         <Categories/>
         <Ourproject />
         <Progress/>
-        <Socialmedia />
+        {/* <Socialmedia /> */}
         <Oursolution />
         <Footer />
    </>

@@ -58,7 +58,7 @@
     justify-content: start;
     align-items: center;
     cursor: pointer;
-    z-index: 99;
+    z-index: 1;
 }
 
 
