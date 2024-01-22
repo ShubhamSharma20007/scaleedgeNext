@@ -2,6 +2,7 @@
 import Image from 'next/image'
 // import AOS from "aos";
 // import "aos/dist/aos.css";
+import { useEffect } from 'react';
 import "@/app/style/HomeCSS/mainpage.css";
 import Companyserver from "./components/MainpageComponent/companyserver";
 import dotline from "../public/images/dottedline.webp";
@@ -17,15 +18,73 @@ import Oursolution from "./components/MainpageComponent/oursolution";
 import Progress from "../app/components/MainpageComponent/progess";
 import Navbar from './components/Navbar/navbar';
 import Footer from './components/Footer/footer';
+import { gsap, Power3 } from "gsap/all";
+import { useRef } from 'react';
+import "../app/style/front-loader.css";
 export default function Home() {
+  
+  let tl = gsap.timeline();
+  let ease = Power3.easeOut();
+  let item = useRef(null);
+  let itemvalue1 = useRef(null);
+  let itemvalue2 = useRef(null);
+  let itemvalue3 = useRef(null);
+
+const gsapAnimation=()=>{
+  tl.from(itemvalue1.current, {
+    x: 200,
+    opacity: 0,
+    stagger: 0.1,
+    duration: 0.5,
+    ease: ease.Power3,
+   
+  }),
+  tl.from(itemvalue2.current, {
+    x: 200,
+    opacity: 0,
+    stagger: 0.1,
+    duration: 0.5,
+    ease: ease,
+  });
+  tl.from(itemvalue3.current, {
+    x: 200,
+    opacity: 0,
+    stagger: 0.1,
+    duration: 0.8,
+    ease: ease,
+  });
+  tl.to([itemvalue1.current, itemvalue2.current, itemvalue3.current], {
+    x: -400,
+    stagger: 0.1,
+    opacity: 0,
+    duration: 0.4,
+    ease: ease.ease,
+  }),
+  tl.to(item.current, {
+    opacity: 1,
+    height:0,
+    duration: 0.6,
+    ease: ease,
+    // onComplete: () => {
+    //   window.scrollTo({
+    //     top: 0,
+    //     behavior: "smooth", 
+    //   })
+    // }
+      })
+}
+useEffect(()=>{
+  gsapAnimation()
+})
+
   return (
    <>
      <Navbar />
-      {/* <div id="loader" ref={item}  >
+      <div id="loader" ref={item}  >
           <p ref={itemvalue1}>Simple</p>
           <p ref={itemvalue2} >Smarter</p>
           <p ref={itemvalue3}>Faster</p>
-      </div> */}
+      </div>
       <div className="col-md-12 main-page-container" >
         <div className="row col-md-10">
           <div className="col-md-5 mainpage-left-container m-auto " data-aos="fade-up"

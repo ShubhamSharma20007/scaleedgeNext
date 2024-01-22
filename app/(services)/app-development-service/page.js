@@ -234,7 +234,7 @@ const page = () => {
                 data-aos-duration={item.Reactduration}
                 data-aos-once="true"
               >
-                <div className="sectwo-icon col-md-1">
+                <div className="sectwo-icon position-relative ">
                   <span>
                     <i class={item.icon}></i>
                   </span>

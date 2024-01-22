@@ -3,7 +3,7 @@ import React from 'react';
 const stylishcard = (props) => {
     const{ contentvalue = [], content = [] } = props
   return (
-    <div className="row col-md-12 sectwo-subcontainer mx-0  " >
+    <div className="row col-md-12 sectwo-subcontainer mx-0 p-0  " >
       {content.map((item, idx) => (
         <div className="ser2-first-container col-md-12 d-flex justify-content-center" key={idx}>
           <div className="row col-md-10 p-0" >
@@ -13,7 +13,7 @@ const stylishcard = (props) => {
         </div>
       ))}
 
-      <div className="row col-md-12 sectwo-subcontainer">
+      <div className="row col-md-12 sectwo-subcontainer p-0">
         {contentvalue.map((itemsec, index) => (
           <div
             className="col-md-5 sectwo-left"

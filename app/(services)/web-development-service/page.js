@@ -247,7 +247,7 @@ const page = () => {
               data-aos-duration={item.Reactduration}
               data-aos-once="true"
             >
-              <div className="sectwo-icon col-md-1 ">
+              <div className="sectwo-icon  position-relative ">
                 <span>
                   <i class={item.icon}></i>
                 </span>
@@ -267,7 +267,7 @@ const page = () => {
       <div className="service-second-section mt-2">
       <Usableitem
     
-      title="web development solutions "
+      title="Web Development Solutions "
       seoVal = {true}
       alt_tag ="web development solutions"
       para="ScaleEdge Solutions is a popular website development company in India. It is dedicated to providing web development solutions to empower businesses and help them achieve their business objectives in web designing. Our skilled web designers and web developers team have practical experience working on web development projects for jewellery, e-commerce, real estate, education, fashion, hospitality, automobile, and finance industries. We have successfully delivered many projects for clients across various industries. We take pride in helping businesses achieve their objectives through our dynamic and user-friendly web development services."

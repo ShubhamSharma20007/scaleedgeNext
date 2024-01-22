@@ -1,5 +1,3 @@
-
-
 /**
  * @type {import('next').NextConfig}
  */
@@ -18,7 +16,7 @@ compiler: {
   },
     eslint:{
         ignoreDuringBuilds:true
-    }   
+    }
   }
-   
+
   module.exports = nextConfig

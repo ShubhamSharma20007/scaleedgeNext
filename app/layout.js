@@ -1,10 +1,15 @@
 import { Rubik } from "next/font/google"
 import './globals.css'
 
+
 export const font = Rubik({
   subsets:['latin'],
   weight:['300','400'],
-})
+});
+
+
+
+
 
 export const metadata = {
   title:{
@@ -32,22 +37,25 @@ export const metadata = {
   robots:{
     index:true,follow:true,archive:true,googleBot:{index:true,follow:true,archive:true}
   },
-  
   authors: [
     { name:"ScaleEdge Solution", url: 'https://scaleedge.in/' }
   ]
-
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+      <meta name="geo.placename" content="Alwar, Rajasthan, India"/>
+  <meta name="geo.position" content="27.594549,76.616687"/>
+  <meta name="geo.region" content="IN-Rajasthan"/>
         <link rel="canonical" href="https://scaleedge.in" />
         <meta property="og:url" content="https://scaleedge.in" />
         <link rel="icon"  type="image/x-icon"  href="./images/favicon.ico"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />
         <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
+
+
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-RV4GV9YXVB"></script>
 
@@ -65,10 +73,11 @@ export default function RootLayout({ children }) {
 {/* metatag */}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RV4GV9YXVB"></script>
 
-
+    
+    
       </head>
 
-      <body  suppressHydrationWarning className={font.className} style={{ overflowX: 'hidden' }}>
+      <body  suppressHydrationWarning className={`main-class ${font.className}`} style={{ overflowX: 'hidden' }}>
         {children}
       </body>
     </html>
