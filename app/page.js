@@ -30,52 +30,42 @@ export default function Home() {
   let itemvalue2 = useRef(null);
   let itemvalue3 = useRef(null);
 
-const gsapAnimation=()=>{
-  tl.from(itemvalue1.current, {
-    x: 200,
-    opacity: 0,
-    stagger: 0.1,
-    duration: 0.5,
-    ease: ease.Power3,
-   
-  }),
-  tl.from(itemvalue2.current, {
-    x: 200,
-    opacity: 0,
-    stagger: 0.1,
-    duration: 0.5,
-    ease: ease,
-  });
-  tl.from(itemvalue3.current, {
-    x: 200,
-    opacity: 0,
-    stagger: 0.1,
-    duration: 0.8,
-    ease: ease,
-  });
-  tl.to([itemvalue1.current, itemvalue2.current, itemvalue3.current], {
-    x: -400,
-    stagger: 0.1,
-    opacity: 0,
-    duration: 0.4,
-    ease: ease.ease,
-  }),
-  tl.to(item.current, {
-    opacity: 1,
-    height:0,
-    duration: 0.6,
-    ease: ease,
-    // onComplete: () => {
-    //   window.scrollTo({
-    //     top: 0,
-    //     behavior: "smooth", 
-    //   })
-    // }
-      })
-}
-useEffect(()=>{
-  gsapAnimation()
-})
+  const gsapAnimation = () => {
+    tl.to(itemvalue1.current, {
+        x: 0,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 0.9,
+        ease: ease.Power3,
+    }).to(itemvalue2.current, {
+        x: 0,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 0.9,
+        ease: ease,
+    }).to(itemvalue3.current, {
+        x: 0,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 0.9,
+        ease: ease,
+    }).from([itemvalue1.current, itemvalue2.current, itemvalue3.current], {
+        x: -400,
+        stagger: 0.1,
+        opacity: 0,
+        duration: 0.4,
+        ease: ease.ease,
+    }).to(item.current, {
+        opacity: 1,
+        height: 0,
+        duration: 0.6,
+        ease: ease,
+    });
+};
+
+useEffect(() => {
+    gsapAnimation();
+}, []);
 
   return (
    <>
